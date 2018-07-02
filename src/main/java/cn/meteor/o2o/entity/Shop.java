@@ -1,161 +1,185 @@
 package cn.meteor.o2o.entity;
 
-import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
-public class Shop implements Serializable {
+public class Shop {
 
-    //主键
-    private Long shopId;
+	private Long shopId;
+	private Long ownerId;
+	private Long shopCategoryId;
+	private String shopName;
+	private String shopDesc;
+	private String shopAddr;
+	private String phone;
+	private String shopImg;
+	private Double longitude;
+	private Double latitude;
+	private Integer priority;
+	private Date createTime;
+	private Date lastEditTime;
+	private Integer enableStatus;
+	private String advice;
 
-    //店铺名称
-    private String shopName;
+	private List<ShopAuthMap> staffList;
+	private Area area;
+	private ShopCategory shopCategory;
+	private ShopCategory parentCategory;
 
-    //店铺描述
-    private String shopDesc;
+	public Long getShopId() {
+		return shopId;
+	}
 
-    //店铺地址
-    private String shopAddr;
+	public void setShopId(Long shopId) {
+		this.shopId = shopId;
+	}
 
-    //联系电话
-    private String phone;
+	public Long getOwnerId() {
+		return ownerId;
+	}
 
-    //店铺图片
-    private String shopImg;
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+	}
 
-    //优先级
-    private Integer priority;
+	public Long getShopCategoryId() {
+		return shopCategoryId;
+	}
 
-    //创建时间
-    private Date createTime;
+	public void setShopCategoryId(Long shopCategoryId) {
+		this.shopCategoryId = shopCategoryId;
+	}
 
-    //最近更新时间
-    private Date lastEditTime;
+	public String getShopName() {
+		return shopName;
+	}
 
-    //店铺状态,-1:不可用，0:审核中，1:可用
-    private Integer enableStatus;
+	public void setShopName(String shopName) {
+		this.shopName = shopName;
+	}
 
-    //管理员给店铺的建议
-    private String advice;
+	public String getShopDesc() {
+		return shopDesc;
+	}
 
-    //店铺所属区域
-    private Area area;
+	public void setShopDesc(String shopDesc) {
+		this.shopDesc = shopDesc;
+	}
 
-    //店铺所有者
-    private PersonInfo owner;
+	public String getShopAddr() {
+		return shopAddr;
+	}
 
-    //店铺所属了类别
-    private ShopCategory shopCategory;
+	public void setShopAddr(String shopAddr) {
+		this.shopAddr = shopAddr;
+	}
 
-    public Long getShopId() {
-        return shopId;
-    }
+	public String getPhone() {
+		return phone;
+	}
 
-    public void setShopId(Long shopId) {
-        this.shopId = shopId;
-    }
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
-    public String getShopName() {
-        return shopName;
-    }
+	public String getShopImg() {
+		return shopImg;
+	}
 
-    public void setShopName(String shopName) {
-        this.shopName = shopName;
-    }
+	public void setShopImg(String shopImg) {
+		this.shopImg = shopImg;
+	}
 
-    public String getShopDesc() {
-        return shopDesc;
-    }
+	public Double getLongitude() {
+		return longitude;
+	}
 
-    public void setShopDesc(String shopDesc) {
-        this.shopDesc = shopDesc;
-    }
+	public void setLongitude(Double longitude) {
+		this.longitude = longitude;
+	}
 
-    public String getShopAddr() {
-        return shopAddr;
-    }
+	public Double getLatitude() {
+		return latitude;
+	}
 
-    public void setShopAddr(String shopAddr) {
-        this.shopAddr = shopAddr;
-    }
+	public void setLatitude(Double latitude) {
+		this.latitude = latitude;
+	}
 
-    public String getPhone() {
-        return phone;
-    }
+	public Integer getPriority() {
+		return priority;
+	}
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+	public void setPriority(Integer priority) {
+		this.priority = priority;
+	}
 
-    public String getShopImg() {
-        return shopImg;
-    }
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-    public void setShopImg(String shopImg) {
-        this.shopImg = shopImg;
-    }
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 
-    public Integer getPriority() {
-        return priority;
-    }
+	public Date getLastEditTime() {
+		return lastEditTime;
+	}
 
-    public void setPriority(Integer priority) {
-        this.priority = priority;
-    }
+	public void setLastEditTime(Date lastEditTime) {
+		this.lastEditTime = lastEditTime;
+	}
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+	public Integer getEnableStatus() {
+		return enableStatus;
+	}
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+	public void setEnableStatus(Integer enableStatus) {
+		this.enableStatus = enableStatus;
+	}
 
-    public Date getLastEditTime() {
-        return lastEditTime;
-    }
+	public List<ShopAuthMap> getStaffList() {
+		return staffList;
+	}
 
-    public void setLastEditTime(Date lastEditTime) {
-        this.lastEditTime = lastEditTime;
-    }
+	public void setStaffList(List<ShopAuthMap> staffList) {
+		this.staffList = staffList;
+	}
 
-    public Integer getEnableStatus() {
-        return enableStatus;
-    }
+	public Area getArea() {
+		return area;
+	}
 
-    public void setEnableStatus(Integer enableStatus) {
-        this.enableStatus = enableStatus;
-    }
+	public void setArea(Area area) {
+		this.area = area;
+	}
 
-    public String getAdvice() {
-        return advice;
-    }
+	public ShopCategory getShopCategory() {
+		return shopCategory;
+	}
 
-    public void setAdvice(String advice) {
-        this.advice = advice;
-    }
+	public void setShopCategory(ShopCategory shopCategory) {
+		this.shopCategory = shopCategory;
+	}
 
-    public Area getArea() {
-        return area;
-    }
+	public String getAdvice() {
+		return advice;
+	}
 
-    public void setArea(Area area) {
-        this.area = area;
-    }
+	public void setAdvice(String advice) {
+		this.advice = advice;
+	}
 
-    public PersonInfo getOwner() {
-        return owner;
-    }
+	public String toString() {
+		return "[shopId=" + shopId + ", shopName=" + shopName + "]";
+	}
 
-    public void setOwner(PersonInfo owner) {
-        this.owner = owner;
-    }
+	public ShopCategory getParentCategory() {
+		return parentCategory;
+	}
 
-    public ShopCategory getShopCategory() {
-        return shopCategory;
-    }
+	public void setParentCategory(ShopCategory parentCategory) {
+		this.parentCategory = parentCategory;
+	}
 
-    public void setShopCategory(ShopCategory shopCategory) {
-        this.shopCategory = shopCategory;
-    }
 }

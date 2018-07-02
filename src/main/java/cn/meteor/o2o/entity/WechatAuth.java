@@ -1,51 +1,52 @@
 package cn.meteor.o2o.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class WechatAuth implements Serializable {
+public class WechatAuth {
+	private Long wechatAuthId;
+	private Long userId;
+	private String openId;
+	private Date createTime;
+	private PersonInfo personInfo;
 
-    //主键
-    private Long weChatAuthId;
+	public Long getWechatAuthId() {
+		return wechatAuthId;
+	}
 
-    //微信openId
-    private String openId;
+	public void setWechatAuthId(Long wechatAuthId) {
+		this.wechatAuthId = wechatAuthId;
+	}
 
-    //创建时间
-    private Date createTime;
+	public Long getUserId() {
+		return userId;
+	}
 
-    //关联用户
-    private PersonInfo peronInfo;
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
 
-    public Long getWeChatAuthId() {
-        return weChatAuthId;
-    }
+	public String getOpenId() {
+		return openId;
+	}
 
-    public void setWeChatAuthId(Long weChatAuthId) {
-        this.weChatAuthId = weChatAuthId;
-    }
+	public void setOpenId(String openId) {
+		this.openId = openId;
+	}
 
-    public String getOpenId() {
-        return openId;
-    }
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-    public void setOpenId(String openId) {
-        this.openId = openId;
-    }
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+	public PersonInfo getPersonInfo() {
+		return personInfo;
+	}
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+	public void setPersonInfo(PersonInfo personInfo) {
+		this.personInfo = personInfo;
+	}
 
-    public PersonInfo getPeronInfo() {
-        return peronInfo;
-    }
-
-    public void setPeronInfo(PersonInfo peronInfo) {
-        this.peronInfo = peronInfo;
-    }
 }

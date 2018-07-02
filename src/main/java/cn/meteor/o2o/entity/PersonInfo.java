@@ -1,106 +1,125 @@
 package cn.meteor.o2o.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class PersonInfo implements Serializable {
+public class PersonInfo {
 
-    //ID
-    private Long userId;
+	private Long userId;
+	private String name;
+	private Date birthday;
+	private String gender;
+	private String phone;
+	private String email;
+	private String profileImg;
+	private Integer customerFlag;
+	private Integer shopOwnerFlag;
+	private Integer adminFlag;
+	private Date createTime;
+	private Date lastEditTime;
+	private Integer enableStatus;
 
-    //姓名
-    private String name;
+	public Long getUserId() {
+		return userId;
+	}
 
-    //头像
-    private String profileImg;
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
 
-    //邮箱
-    private String email;
+	public String getName() {
+		return name;
+	}
 
-    //性别
-    private String gender;
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    //是否禁用
-    private Integer enableStatus;
+	public Date getBirthday() {
+		return birthday;
+	}
 
-    //用户类型，1：顾客，2：店家，3：超级管理员
-    private Integer userType;
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 
-    //创建时间
-    private Date createTime;
+	public String getGender() {
+		return gender;
+	}
 
-    //最近修改时间
-    private Date lastEditTime;
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 
-    public Long getUserId() {
-        return userId;
-    }
+	public String getPhone() {
+		return phone;
+	}
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getProfileImg() {
-        return profileImg;
-    }
+	public String getProfileImg() {
+		return profileImg;
+	}
 
-    public void setProfileImg(String profileImg) {
-        this.profileImg = profileImg;
-    }
+	public void setProfileImg(String profileImg) {
+		this.profileImg = profileImg;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public Integer getCustomerFlag() {
+		return customerFlag;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setCustomerFlag(Integer customerFlag) {
+		this.customerFlag = customerFlag;
+	}
 
-    public String getGender() {
-        return gender;
-    }
+	public Integer getShopOwnerFlag() {
+		return shopOwnerFlag;
+	}
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+	public void setShopOwnerFlag(Integer shopOwnerFlag) {
+		this.shopOwnerFlag = shopOwnerFlag;
+	}
 
-    public Integer getEnableStatus() {
-        return enableStatus;
-    }
+	public Integer getAdminFlag() {
+		return adminFlag;
+	}
 
-    public void setEnableStatus(Integer enableStatus) {
-        this.enableStatus = enableStatus;
-    }
+	public void setAdminFlag(Integer adminFlag) {
+		this.adminFlag = adminFlag;
+	}
 
-    public Integer getUserType() {
-        return userType;
-    }
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-    public void setUserType(Integer userType) {
-        this.userType = userType;
-    }
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+	public Date getLastEditTime() {
+		return lastEditTime;
+	}
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+	public void setLastEditTime(Date lastEditTime) {
+		this.lastEditTime = lastEditTime;
+	}
 
-    public Date getLastEditTime() {
-        return lastEditTime;
-    }
+	public Integer getEnableStatus() {
+		return enableStatus;
+	}
 
-    public void setLastEditTime(Date lastEditTime) {
-        this.lastEditTime = lastEditTime;
-    }
+	public void setEnableStatus(Integer enableStatus) {
+		this.enableStatus = enableStatus;
+	}
+
 }

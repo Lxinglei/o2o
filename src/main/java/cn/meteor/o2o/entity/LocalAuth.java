@@ -1,73 +1,70 @@
 package cn.meteor.o2o.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class LocalAuth implements Serializable {
+public class LocalAuth {
+	private Long localAuthId;
+	private String userName;
+	private String password;
+	private Long userId;
+	private Date createTime;
+	private Date lastEditTime;
+	private PersonInfo personInfo;
 
-    //主键
-    private Long localAuthId;
+	public Long getLocalAuthId() {
+		return localAuthId;
+	}
 
-    //用户名
-    private String username;
+	public void setLocalAuthId(Long localAuthId) {
+		this.localAuthId = localAuthId;
+	}
 
-    //密码
-    private String password;
+	public String getUserName() {
+		return userName;
+	}
 
-    //创建时间
-    private Date createTime;
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
-    //最近更新时间
-    private Date lastEditTime;
+	public String getPassword() {
+		return password;
+	}
 
-    //关联用户
-    private PersonInfo peronInfo;
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public Long getLocalAuthId() {
-        return localAuthId;
-    }
+	public Long getUserId() {
+		return userId;
+	}
 
-    public void setLocalAuthId(Long localAuthId) {
-        this.localAuthId = localAuthId;
-    }
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public Date getLastEditTime() {
+		return lastEditTime;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setLastEditTime(Date lastEditTime) {
+		this.lastEditTime = lastEditTime;
+	}
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+	public PersonInfo getPersonInfo() {
+		return personInfo;
+	}
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+	public void setPersonInfo(PersonInfo personInfo) {
+		this.personInfo = personInfo;
+	}
 
-    public Date getLastEditTime() {
-        return lastEditTime;
-    }
-
-    public void setLastEditTime(Date lastEditTime) {
-        this.lastEditTime = lastEditTime;
-    }
-
-    public PersonInfo getPeronInfo() {
-        return peronInfo;
-    }
-
-    public void setPeronInfo(PersonInfo peronInfo) {
-        this.peronInfo = peronInfo;
-    }
 }
